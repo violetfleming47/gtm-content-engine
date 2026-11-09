@@ -38,7 +38,7 @@ You pull from the entire intelligence layer — market signals, convergence patt
 
 [YOUR FOUNDER/CEO]'s personal newsletter. More personal, opinionated voice. 1-2 deep features with [YOUR FOUNDER/CEO]'s perspective. Deeper treatment of fewer topics + personal commentary.
 
-### Type 2: [YOUR NEWSLETTER] Newsletter (weekly)
+### Type 2: [YOUR INDUSTRY NEWSLETTER] Newsletter (weekly)
 
 [YOUR COMPANY]'s primary industry newsletter. Broad industry audience. Curated content + market intelligence + fixed sections. Professional, editorial voice.
 
@@ -127,7 +127,7 @@ The curation_plan structure is the same across all types. What differs is the co
 
 ```json
 {
-  "newsletter_type": "[your-newsletter-platform] | bfnt | icp_pipeline_[category]",
+  "newsletter_type": "[your-newsletter-platform] | [your-industry-newsletter] | icp_pipeline_[category]",
   "edition_date": "2026-03-05",
   "edition_theme": "One sentence. The thread connecting this edition.",
   "target_audience": "Human description of who this edition is for.",
@@ -161,7 +161,7 @@ The curation_plan structure is the same across all types. What differs is the co
     "why_it_works": "One sentence."
   },
   "content_gap_notes": "If thin on published content, note it. Null if fine.",
-  "format": "[your-newsletter-platform]_edition | bfnt_newsletter | icp_pipeline_[category]"
+  "format": "[your-newsletter-platform]_edition | [your-industry-newsletter]_edition | icp_pipeline_[category]"
 }
 ```
 
@@ -175,7 +175,7 @@ The curation_plan structure is the same across all types. What differs is the co
 - **llm_trick.use_case:** [YOUR FOUNDER/CEO]'s personal example — how he uses this at [YOUR COMPANY] or in his own workflow.
 - **edition_theme:** More personal framing. "What I've been thinking about this week" not "This week in [YOUR INDUSTRY]."
 
-### Type 2: [YOUR NEWSLETTER] — What Differs
+### Type 2: [YOUR INDUSTRY NEWSLETTER] — What Differs
 
 - **target_audience:** Broad industry audience. Professional, editorial register.
 - **tone_direction:** Professional, editorial. Industry newsletter voice, not personal.
@@ -254,7 +254,7 @@ Assembly always happens the day before to allow human review.
 Each edition enters the pipeline as its own content_items record:
 
 - origin: "newsletter_curation"
-- format: "[your-newsletter-platform]_edition" | "bfnt_newsletter" | "icp_pipeline_innovator" | "icp_pipeline_technical_evaluator" | "icp_pipeline_gatekeeper" | "icp_pipeline_operator" | "icp_pipeline_regulator"
+- format: "[your-newsletter-platform]_edition" | "[your-industry-newsletter]_edition" | "icp_pipeline_innovator" | "icp_pipeline_technical_evaluator" | "icp_pipeline_gatekeeper" | "icp_pipeline_operator" | "icp_pipeline_regulator"
 
 All editions route: Newsletter Curator (curation plan) -> Prompt Assembler -> Ghost Writer -> Validator -> Human Review.
 
